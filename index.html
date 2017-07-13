@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width,user-scalable=no"/>
+	<link rel="stylesheet" href="lib/tau/mobile/theme/default/tau.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	<title>QR Code door key</title>
+</head>
+
+<body>
+<!-- main -->
+<div class="ui-page" id="main">
+	<header>
+		<h1>QR Code door key</h1>
+	</header>
+	<div class="ui-content">
+		<h2 id="main-title">Main</h2>	
+		<div class="container">
+			<div class="button">
+				<a href="#signUp" style="text-decoration:none;">Sign Up</a>
+			</div>
+			<div class="button">
+				<a href="#signIn" style="text-decoration:none;">Sign In</a>
+			</div>
+			<div class="button">
+				<a href="#QRarea" style="text-decoration:none;">QR Code</a>
+			</div>
+		</div>		
+	
+	</div><!-- /content -->
+</div><!-- main -->
+
+
+<!-- sign up -->
+<div class="ui-page" id="signUp">
+	<header>
+		<h1>Sign up</h1>
+	</header><!-- /header -->
+
+	<div class="ui-content">
+		<div class="app-introduction">
+			<input type="text" name="new_id" id="new_id" placeholder="ID"><br/>
+			<input type="password" name="new_password" id="new_password" placeholder="password"><br/>
+			<input type="password" name="pw_check" id="pw_check" placeholder="password check"><br/>
+			<div class="container">
+				<div class="button" id="signup">Sign Up</div>
+				<div class="button">
+					<a href="#main" style="text-decoration:none;">To the main</a>
+				</div>
+			</div>
+		</div>	
+	</div><!-- /content -->
+</div><!-- sing up -->
+
+<!-- sign in  -->
+<div class="ui-page" id="signIn">
+	<header>
+		<h1>Sign in</h1>
+	</header><!-- /header -->
+
+	<div class="ui-content">
+		
+		<input type="text" name="my_id" id="my_id" placeholder="ID"><br/>
+		<input type="password" name="my_password" id="my_password" placeholder="Password"><br/>
+		<div id="idsave-text">ID save? 
+		<input type="checkbox" id="idsave-checkbox"></div>
+		<div class="container">
+			<div class="button" id="signin">Sign in</div>
+			<div class="button">
+				<a href="#main" style="text-decoration:none;">To the main</a>
+			</div>
+		</div>
+		
+	</div><!-- /content -->
+</div><!-- sign in -->
+
+<!-- QR area -->
+<div class="ui-page" id="QRarea">
+	<header>
+		<h1>QR Code key</h1>
+	</header><!-- /header -->
+
+	<div class="ui-content">
+		<div class="app-introduction">
+			<div class="container">
+				<div class="button" id="createBtn">Create</div>
+				<div><img id="qrcode" src='' /></div>				
+				<div class="button">
+					<a href="#main" style="text-decoration:none;">To the main</a>
+				</div>
+				<div class="button" id="log_check">
+					<a href="#logpage" style="text-decoration:none;">Log check</a>
+				</div>
+				<div>If you want to recreate your qr code<br/>
+						then press the create button again
+				</div>
+			</div>
+		</div>
+	</div><!-- /content -->
+</div><!-- qr area -->
+
+
+<!-- logpage -->
+<div class="ui-page" id="logpage">
+	<header>
+		<h1>Door open log</h1>
+	</header><!-- /header -->
+
+	<div class="ui-content">
+		<div class="app-introduction">
+			<p id="logtext"></p>
+			<div class="container">
+				<div class="button" id="back">Back</div>
+			</div>
+		</div>
+	</div><!-- /content -->
+</div><!-- log  -->
+
+
+<script type="text/javascript" src="lib/tau/mobile/js/tau.js"></script>
+<script src="js/main.js"></script>
+<script src="js/aes.js"></script>
+<script src="js/AesUtil.js"></script>
+<script src="js/pbkdf2.js"></script>
+</body>
+</html>
